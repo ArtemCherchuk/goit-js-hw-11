@@ -16,7 +16,7 @@ const perPage = 40;
 const onHandleBtnSubmit = e => {
   e.preventDefault();
   dateContainer.innerHTML = '';
-  const inputValue = e.target[0].value;
+  const inputValue = String(e.target[0].value).trim();
   // console.log(inputValue);
 
   getDataImages(inputValue, page, perPage)
@@ -45,7 +45,7 @@ const renderList = (arr, container) => {
   const markup = arr
     .map(
       item => `<div class="photo-card">
-      <a href="${item.largeImageURL}">
+      <a href="${item.largeImageURL}" class="link-card">
       <img src="${item.webformatURL}" alt="${item.tags}" width="300" height="250"  loading="lazy" />
       </a>
       <div class="info">

@@ -1,3 +1,6 @@
+.body {
+  margin: 0;
+}
 .container {
   width: 1250px;
   padding: 20px;
@@ -5,7 +8,44 @@
 }
 
 .search-form {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  background-color: #ffebcd;
   margin-bottom: 20px;
+  padding: 20px;
+}
+
+.search-form input {
+  font-size: 18px;
+  padding: 10px 10px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+
+  transition: border 250ms linear;
+}
+.search-form input:hover,
+.search-form input:focus {
+  border: 2px solid #007bff;
+  cursor: pointer;
+}
+
+.search-form button {
+  background-color: #fff;
+  width: 120px;
+  font-size: 18px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
 }
 .gallery {
   display: flex;
@@ -19,6 +59,13 @@
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+
+  transition: box-shadow 250ms linear;
+}
+
+.photo-card:hover,
+.photo-card:focus {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 .info {
@@ -41,15 +88,20 @@
 .load-more {
   display: block;
   padding: 10px 20px;
-  margin: 0 auto;
-  font-size: 1.2em;
-  font-weight: bold;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
   text-align: center;
-  text-transform: uppercase;
   border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000000;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+  transition: color 250ms linear, background-color 250ms linear;
+}
+
+.load-more:hover,
+.load-more:focus {
+  color: #fff;
+  background-color: #007bff;
 }
